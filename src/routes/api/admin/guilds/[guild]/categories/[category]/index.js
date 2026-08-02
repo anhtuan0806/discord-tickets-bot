@@ -123,6 +123,13 @@ module.exports.patch = fastify => ({
 		if (Object.prototype.hasOwnProperty.call(data, 'id')) delete data.id;
 		if (Object.prototype.hasOwnProperty.call(data, 'createdAt')) delete data.createdAt;
 
+		if (Array.isArray(data.questions)) {
+			data.questions = data.questions.map(q => ({
+				...q,
+				type: q.type || 'TEXT',
+			}));
+		}
+
 		const category = await client.prisma.category.update({
 			data: {
 				...data,

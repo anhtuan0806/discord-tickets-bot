@@ -111,6 +111,13 @@ module.exports.post = fastify => ({
 
 		data.channelName ||= 'ticket-{num}'; // not ??=, expect empty string
 
+		if (Array.isArray(data.questions)) {
+			data.questions = data.questions.map(q => ({
+				...q,
+				type: q.type || 'TEXT',
+			}));
+		}
+
 		const category = await client.prisma.category.create({
 			data: {
 				guild: { connect: { id: guild.id } },
