@@ -11,9 +11,15 @@ buttons:
   close:
     emoji: ✖️
     text: Đóng
+  confirm_no:
+    emoji: ✖️
+    text: Không
   confirm_open:
     emoji: ✅
     text: Tạo ticket
+  confirm_yes:
+    emoji: ✅
+    text: Có
   create:
     emoji: 🎫
     text: Tạo ticket hỗ trợ
@@ -482,6 +488,10 @@ ticket:
     description: Hiện tại không có nhân viên nào trực nên có thể mất nhiều thời gian
       hơn bình thường để nhận được sự giúp đỡ.
     title: 😴 Chúng tôi không trực tuyến
+  confirm_prompt:
+    title: ❓ Xác nhận mở Ticket
+    description: Bạn có chắc chắn muốn tạo ticket hỗ trợ trong danh mục **{category}** không?
+    cancelled: ❌ Đã hủy thao tác mở ticket.
   opening_message:
     content: |
       {staff}

@@ -11,9 +11,15 @@ buttons:
   close:
     emoji: ✖️
     text: Close
+  confirm_no:
+    emoji: ✖️
+    text: "No"
   confirm_open:
     emoji: ✅
     text: Create ticket
+  confirm_yes:
+    emoji: ✅
+    text: "Yes"
   create:
     emoji: 🎫
     text: Create a ticket
@@ -484,6 +490,10 @@ ticket:
       There aren't any staff members available at the moment, so it may
       take longer than usual to get a response.
     title: 😴 We're not online
+  confirm_prompt:
+    title: ❓ Confirm Ticket Creation
+    description: Are you sure you want to create a support ticket in **{category}**?
+    cancelled: ❌ Ticket creation cancelled.
   opening_message:
     content: |
       {staff}
